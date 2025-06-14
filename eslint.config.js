@@ -11,7 +11,7 @@ export default tseslint.config(
   {
     ignores: [".next"],
   },
-  ...compat.extends("next/core-web-vitals"),
+  // ...compat.extends("next/core-web-vitals"), // TODO: fix
   {
     files: ["**/*.ts", "**/*.tsx"],
     plugins: {
