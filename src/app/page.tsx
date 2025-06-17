@@ -4,7 +4,7 @@ import { apps, dockApps } from '@/lib/config'
 
 export default function Home() {
   return (
-    <main className='bg-cobalt flex min-h-screen flex-col items-center p-8'>
+    <main className='bg-cb-dark-blue flex min-h-screen flex-col items-center p-8'>
       <div className='relative flex h-full w-full max-w-[390px] flex-col gap-8'>
         {/* App Grid */}
         <div className='mx-0 grid flex-1 grid-cols-4 gap-x-4 gap-y-8'>
