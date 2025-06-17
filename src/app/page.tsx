@@ -149,10 +149,10 @@ export default function Home() {
   ]
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-center bg-black p-8'>
-      <div className='relative flex h-full w-full max-w-[390px] flex-col'>
+    <main className='flex min-h-screen flex-col items-center bg-black p-8'>
+      <div className='relative flex h-full w-full max-w-[390px] flex-col gap-8'>
         {/* App Grid */}
-        <div className='mx-0 grid flex-1 grid-cols-4 gap-x-4 gap-y-8 py-8'>
+        <div className='mx-0 grid flex-1 grid-cols-4 gap-x-4 gap-y-8'>
           {apps.map((app, index) => (
             <AppIcon
               key={index}
