@@ -1,8 +1,23 @@
+'use client'
+
 import AppIcon from '@/components/app-icon'
 import DockIcon from '@/components/dock-icon'
-import { apps, dockApps } from '@/lib/config'
+import useLocalStorage from '@/lib/use-local-storage'
+import { apps as defaultApps, dockApps as defaultDockApps } from '@/lib/config'
+
+type App = {
+  name: string
+  color: string
+  icon: string
+}
 
 export default function Home() {
+  const [apps, setApps] = useLocalStorage<App[]>('homescreen-apps', defaultApps)
+  const [dockApps, setDockApps] = useLocalStorage<App[]>(
+    'homescreen-dock-apps',
+    defaultDockApps
+  )
+  if (!apps || !dockApps) return null
   return (
     <main className='bg-cb-dark-blue flex min-h-screen flex-col items-center p-8'>
       <div className='relative flex h-full w-full max-w-[390px] flex-col gap-8'>
